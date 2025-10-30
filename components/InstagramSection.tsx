@@ -15,8 +15,8 @@ export function InstagramSection() {
   }, []);
 
   return (
-    <section id="ig" className="py-20 bg-white">
-      <div className="container mx-auto px-4">
+    <section id="ig" className="py-20 bg-white w-full overflow-hidden">
+      <div className="container mx-auto px-3 sm:px-4 max-w-7xl">
         {/* Instagram Header */}
         <AnimatedSection animation="fade-in-up">
           <div className="flex items-center justify-center gap-4 mb-8">

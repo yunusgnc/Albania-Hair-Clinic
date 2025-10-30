@@ -5,8 +5,8 @@ import { Facebook, Instagram, Youtube, Mail, Phone, MapPin } from "lucide-react"
 
 export function Footer() {
   return (
-    <footer className="bg-black text-white">
-      <div className="container mx-auto px-4 py-8 md:py-12">
+    <footer className="bg-black text-white w-full overflow-hidden">
+      <div className="container mx-auto px-3 sm:px-4 py-8 md:py-12 max-w-7xl">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-8">
           {/* Logo & Description */}
           <div className="col-span-1 sm:col-span-2 lg:col-span-1">

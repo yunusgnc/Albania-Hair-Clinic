@@ -47,8 +47,8 @@ export function ChiSiamoSection() {
   ];
 
   return (
-    <section id="aboutus" className="py-20 bg-white">
-      <div className="container mx-auto px-4 max-w-7xl">
+    <section id="aboutus" className="py-20 bg-white w-full overflow-hidden">
+      <div className="container mx-auto px-3 sm:px-4 max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-start lg:items-start">
           {/* Left Side - Text Content */}
           <div className="space-y-8 order-1 lg:order-1">
@@ -91,20 +91,21 @@ export function ChiSiamoSection() {
             </div>
 
             <AnimatedSection animation="fade-in-up" delay={300}>
-              <a href="https://wa.link/a7fuu7" target="_blank" rel="noopener noreferrer">
-                <Button 
-                  className="gold-button text-white font-semibold px-8 py-6 rounded-lg hover:shadow-lg transition-all hover:scale-105"
-                  aria-label="Richiedi una consulenza gratuita per il trapianto di capelli"
-                >
-                  Richiedi una consulenza gratuita
-                </Button>
+              <a 
+                href="https://wa.link/a7fuu7" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-block gold-button text-white font-semibold px-8 py-6 rounded-lg hover:shadow-lg transition-all hover:scale-105 text-center"
+                aria-label="Richiedi una consulenza gratuita per il trapianto di capelli"
+              >
+                Richiedi una consulenza gratuita
               </a>
             </AnimatedSection>
           </div>
 
           {/* Right Side - Image with Overlays */}
           <div className="relative w-full h-80 sm:h-96 md:h-[500px] lg:h-[600px] lg:min-h-[590px] order-2 lg:order-2">
-            <AnimatedSection animation="fade-in" delay={200} className="h-full">
+            <AnimatedSection animation="fade-in" delay={200} className="h-full relative">
               {/* Main Background Image Container */}
               <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl">
                 {/* Main Procedure Image */}

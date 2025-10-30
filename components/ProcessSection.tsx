@@ -28,8 +28,8 @@ export function ProcessSection() {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-purple-50 to-white">
-      <div className="container mx-auto px-4">
+    <section className="py-20 bg-gradient-to-b from-purple-50 to-white w-full overflow-hidden">
+      <div className="container mx-auto px-3 sm:px-4 max-w-7xl">
         <AnimatedSection animation="fade-in-up">
           <div className="text-center mb-16">
             <p className="text-[#E8B33F] font-medium text-sm uppercase tracking-widest mb-3">

@@ -25,8 +25,8 @@ export function TecnicheSection() {
   ];
 
   return (
-    <section className="py-10 bg-purple-50">
-      <div className="container mx-auto px-4">
+    <section className="py-10 bg-purple-50 w-full overflow-hidden">
+      <div className="container mx-auto px-3 sm:px-4 max-w-7xl">
         {/* Header */}
         <AnimatedSection animation="fade-in-up">
           <div className="text-center mb-12">
@@ -59,7 +59,7 @@ export function TecnicheSection() {
                     </h3>
                     <ArrowRight className="w-5 h-5 text-gray-300 flex-shrink-0" />
                   </div>
-                  <hr className="border-gray-200 my-4"  />
+                  <hr className="border-gray-200 my-4" />
 
                   {/* Description */}
                   <p className="text-gray-600 text-sm leading-relaxed">
@@ -94,9 +94,15 @@ export function TecnicheSection() {
                 più accurata... Creiamo anche un'acconciatura eccellente con le
                 tecniche tecnologiche più avanzate.
               </p>
-              <Button className="bg-[#E8B33F] hover:bg-[#D4A024] text-white font-bold px-6 md:px-10 py-2 md:py-2.5 rounded-full text-xs md:text-sm transition-colors w-full md:w-auto">
-                Ottieni informazioni
-              </Button>
+              <a
+                href="https://wa.link/a7fuu7"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button className="bg-[#E8B33F] hover:bg-[#D4A024] text-white font-bold px-6 md:px-10 py-2 md:py-2.5 rounded-full text-xs md:text-sm transition-colors w-full md:w-auto">
+                  Ottieni informazioni
+                </Button>
+              </a>
             </div>
           </div>
         </AnimatedSection>

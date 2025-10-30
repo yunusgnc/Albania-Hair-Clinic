@@ -20,8 +20,8 @@ export function WhyChooseSection() {
   ];
 
   return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-4">
+    <section className="py-20 bg-white w-full overflow-hidden">
+      <div className="container mx-auto px-3 sm:px-4 max-w-7xl">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Side - Text */}
           <AnimatedSection animation="fade-in-left">

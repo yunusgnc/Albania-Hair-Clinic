@@ -10,9 +10,9 @@ export function HeroSection() {
   return (
     <section
       id="hero"
-      className="px-4 sm:px-6 md:px-8 lg:px-20 py-8 md:py-10 lavender-bg md:mx-6 lg:mx-8 md:my-10 md:border-2 md:rounded-3xl md:shadow-lg"
+      className="px-3 sm:px-4 md:px-6 lg:px-8 py-8 md:py-10 lavender-bg md:mx-3 lg:mx-4 md:my-10 md:border-2 md:rounded-3xl md:shadow-lg w-full max-w-full overflow-hidden"
     >
-      <div className="container mx-auto px-4 max-w-7xl">
+      <div className="container mx-auto px-2 sm:px-4 max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Column - Text Content */}
           <AnimatedSection animation="fade-in-right" className="space-y-6">
@@ -43,12 +43,14 @@ export function HeroSection() {
             </div>
 
             <div>
-              <Button
-                className="gold-button text-white font-semibold px-6 sm:px-8 py-5 sm:py-6 text-base rounded-full w-full sm:w-auto"
-                size="lg"
+              <a
+                href="https://wa.link/a7fuu7"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gold-button text-white font-semibold px-6 sm:px-8 py-5 sm:py-6 text-base rounded-full w-full sm:w-auto hover:opacity-90 transition-opacity"
               >
                 Prenota un appuntamento
-              </Button>
+              </a>
             </div>
             <hr className="my-4 border-gray-300" />
             {/* Google Rating */}
@@ -57,7 +59,9 @@ export function HeroSection() {
                 <span className="text-sm font-medium text-gray-600">
                   Valutazione Google
                 </span>
-                <span className="text-lg sm:text-xl font-bold text-gray-900">4.9</span>
+                <span className="text-lg sm:text-xl font-bold text-gray-900">
+                  4.9
+                </span>
                 <div className="flex">
                   {[1, 2, 3, 4, 5].map((star) => (
                     <Star
@@ -87,6 +91,7 @@ export function HeroSection() {
                 width={600}
                 height={600}
                 className="w-full h-auto"
+                style={{ width: "auto", height: "auto" }}
                 priority
               />
 
@@ -138,7 +143,9 @@ export function HeroSection() {
                   <p className="text-xs md:text-sm text-gray-600">
                     Parla con i nostri oltre
                   </p>
-                  <p className="text-xs md:text-sm font-medium text-gray-900">15 medici</p>
+                  <p className="text-xs md:text-sm font-medium text-gray-900">
+                    15 medici
+                  </p>
                 </div>
               </motion.div>
 
@@ -158,8 +165,12 @@ export function HeroSection() {
                   <Star className="w-5 h-5 md:w-6 md:h-6 fill-white text-white" />
                 </div>
                 <div className="text-center">
-                  <p className="text-lg md:text-2xl font-bold text-gray-900">3,000 +</p>
-                  <p className="text-xs md:text-sm text-gray-600">clienti soddisfatti</p>
+                  <p className="text-lg md:text-2xl font-bold text-gray-900">
+                    3,000 +
+                  </p>
+                  <p className="text-xs md:text-sm text-gray-600">
+                    clienti soddisfatti
+                  </p>
                 </div>
               </motion.div>
             </div>

@@ -67,8 +67,29 @@
   * {
     @apply border-border;
   }
+  
+  html {
+    overflow-x: hidden !important;
+    width: 100vw !important;
+    max-width: 100% !important;
+  }
+  
   body {
     @apply bg-background text-foreground;
+    overflow-x: hidden !important;
+    width: 100vw !important;
+    max-width: 100% !important;
+    position: relative;
+  }
+  
+  /* Prevent horizontal scroll on all elements */
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Force all containers to stay within viewport */
+  section, div, header, footer, main {
+    max-width: 100vw;
   }
 }
 

@@ -10,20 +10,17 @@ export function PromoModal() {
   const whatsappLink = "https://wa.link/a7fuu7";
 
   useEffect(() => {
-    // Modal'ı sayfa tamamen yüklendikten sonra aç
     const handlePageLoad = () => {
       const timer = setTimeout(() => {
         setIsOpen(true);
-      }, 1500); // Sayfa yüklendikten 1.5 saniye sonra
+      }, 9000);
 
       return () => clearTimeout(timer);
     };
 
-    // Eğer sayfa zaten yüklenmişse (cached)
     if (document.readyState === "complete") {
       handlePageLoad();
     } else {
-      // Sayfa yükleniyorsa
       window.addEventListener("load", handlePageLoad);
       return () => window.removeEventListener("load", handlePageLoad);
     }
@@ -42,7 +39,6 @@ export function PromoModal() {
     <AnimatePresence>
       {isOpen && (
         <>
-          {/* Overlay - tıklandığında kapat */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -51,7 +47,6 @@ export function PromoModal() {
             className="fixed inset-0 bg-black/60 z-[60] backdrop-blur-sm"
           />
 
-          {/* Modal */}
           <motion.div
             initial={{ scale: 0.92, opacity: 0, y: 50 }}
             animate={{ scale: 1, opacity: 1, y: 0 }}
@@ -75,7 +70,6 @@ export function PromoModal() {
                 />
               </motion.button>
 
-              {/* Image */}
               <div className="relative h-32 xs:h-36 sm:h-44 md:h-52 overflow-hidden bg-gradient-to-br from-emerald-600 to-slate-900">
                 <Image
                   src="/img/promo-modal.png"
@@ -88,14 +82,13 @@ export function PromoModal() {
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent" />
               </div>
 
-              {/* Content */}
               <div className="px-3 xs:px-4 sm:px-5 md:px-6 py-3 xs:py-4 sm:py-5">
                 <h2 className="text-lg xs:text-xl sm:text-2xl md:text-3xl font-bold bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent mb-1.5 sm:mb-2 text-center leading-tight">
-                  Të gjitha përfshirë: 1150€
+                  Tutto incluso: 1150€
                 </h2>
 
                 <p className="text-[11px] xs:text-xs sm:text-sm text-gray-400 mb-3 sm:mb-4 text-center font-medium">
-                  Planifiko transplantimin e flokëve me mjekët turq
+                  Pianifica il tuo trapianto di capelli con medici turchi
                 </p>
 
                 <div className="space-y-1.5 sm:space-y-2 mb-3 sm:mb-4">
@@ -109,7 +102,7 @@ export function PromoModal() {
                       ✓
                     </span>
                     <span className="text-[11px] xs:text-xs sm:text-sm text-gray-300 leading-snug">
-                      Operacioni me teknikën FUE Sapphire
+                      Operazione con tecnica FUE Sapphire
                     </span>
                   </motion.div>
                   <motion.div
@@ -122,7 +115,7 @@ export function PromoModal() {
                       ✓
                     </span>
                     <span className="text-[11px] xs:text-xs sm:text-sm text-gray-300 leading-snug">
-                      Testet e gjakut (Para operacionit)
+                      Esami del sangue (Pre-operazione)
                     </span>
                   </motion.div>
                 </div>
@@ -134,7 +127,7 @@ export function PromoModal() {
                   className="w-full bg-gradient-to-r from-emerald-500 via-emerald-400 to-emerald-500 hover:from-emerald-600 hover:via-emerald-500 hover:to-emerald-600 text-white font-bold py-2 xs:py-2.5 sm:py-3 px-3 xs:px-4 sm:px-6 rounded-lg sm:rounded-xl transition-all flex items-center justify-center gap-1.5 sm:gap-2 shadow-lg shadow-emerald-500/30 text-[11px] xs:text-xs sm:text-sm md:text-base mb-1.5 sm:mb-2 border border-emerald-400/30"
                 >
                   <MessageCircle className="w-3.5 h-3.5 xs:w-4 xs:h-4 sm:w-5 sm:h-5 flex-shrink-0" />
-                  <span className="leading-tight">FILLO CHAT NGA WHATSAPP</span>
+                  <span className="leading-tight">INIZIA CHAT SU WHATSAPP</span>
                 </motion.button>
 
                 <motion.button
@@ -142,7 +135,7 @@ export function PromoModal() {
                   whileHover={{ opacity: 0.8 }}
                   className="w-full text-gray-500 hover:text-gray-400 text-[10px] xs:text-xs font-medium transition-colors py-1 sm:py-1.5"
                 >
-                  Më vonë
+                  Più tardi
                 </motion.button>
               </div>
             </div>

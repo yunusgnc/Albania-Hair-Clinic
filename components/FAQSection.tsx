@@ -44,8 +44,8 @@ export function FAQSection() {
   ];
 
   return (
-    <section id="support" className="py-20 bg-gradient-to-b from-purple-50 to-white">
-      <div className="container mx-auto px-4">
+    <section id="support" className="py-20 bg-gradient-to-b from-purple-50 to-white w-full overflow-hidden">
+      <div className="container mx-auto px-3 sm:px-4 max-w-7xl">
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Left Side - Title, Description & Contact */}
           <AnimatedSection animation="fade-in-left">

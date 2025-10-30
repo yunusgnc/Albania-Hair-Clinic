@@ -36,8 +36,8 @@ export function ResultsSection() {
   ];
 
   return (
-    <section id="videos" className="py-20 lavender-bg">
-      <div className="container mx-auto px-4">
+    <section id="videos" className="py-20 lavender-bg w-full overflow-hidden">
+      <div className="container mx-auto px-3 sm:px-4 max-w-7xl">
         <AnimatedSection animation="fade-in-up">
           <div className="text-center mb-10 md:mb-12">
             <p className="text-[#E8B33F] font-medium text-xs sm:text-sm uppercase tracking-widest mb-3 md:mb-4">
@@ -49,7 +49,7 @@ export function ResultsSection() {
           </div>
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4 w-full px-2 md:px-0">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4 w-full">
           {videos.map((video, index) => (
             <AnimatedSection
               key={index}

@@ -21,11 +21,9 @@ import { PromoModal } from "@/components/PromoModal";
 
 export default function Home() {
   return (
-    <>
+    <div className="overflow-x-hidden w-full">
       <PromoModal />
-      <div className="px-4 sm:px-6 md:mx-6 lg:mx-8 my-6 md:my-10 border-2 rounded-3xl">
-        <Header />
-      </div>
+      <Header />
       <HeroSection />
       <ChiSiamoSection />
       <ResultsSection />
@@ -40,6 +38,6 @@ export default function Home() {
       <Footer />
       <WhatsAppButton />
       <MobileBottomNav />
-    </>
+    </div>
   );
 }

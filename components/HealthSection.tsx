@@ -7,8 +7,8 @@ import Image from "next/image";
 
 export function HealthSection() {
   return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-4">
+    <section className="py-20 bg-white w-full overflow-hidden">
+      <div className="container mx-auto px-3 sm:px-4 max-w-7xl">
         {/* Header */}
         <AnimatedSection animation="fade-in-up">
           <div className="text-center mb-16">
@@ -19,7 +19,9 @@ export function HealthSection() {
               La salute è ricchezza
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto text-base">
-              I trattamenti saranno effettuati presso strutture sanitarie convenzionate con certificati di autorizzazione al turismo sanitario
+              I trattamenti saranno effettuati presso strutture sanitarie
+              convenzionate con certificati di autorizzazione al turismo
+              sanitario
             </p>
           </div>
         </AnimatedSection>
@@ -36,7 +38,8 @@ export function HealthSection() {
                     <CheckSquare className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                    Fai domanda ora, ricevi il supporto gratuito dei nostri esperti
+                    Fai domanda ora, ricevi il supporto gratuito dei nostri
+                    esperti
                   </h3>
                 </div>
                 <div className="flex items-end gap-4">
@@ -47,9 +50,15 @@ export function HealthSection() {
                     height={120}
                     className="rounded-xl"
                   />
-                  <Button className="bg-[#E8B33F] hover:bg-[#D4A024] text-white font-semibold px-6 py-3 rounded-full">
-                    Candidati ora
-                  </Button>
+                  <a
+                    href="https://wa.link/a7fuu7"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button className="bg-[#E8B33F] hover:bg-[#D4A024] text-white font-semibold px-6 py-3 rounded-full">
+                      Candidati ora
+                    </Button>
+                  </a>
                 </div>
               </div>
             </AnimatedSection>
@@ -88,12 +97,20 @@ export function HealthSection() {
               <div className="bg-gradient-to-br from-purple-50 to-white rounded-3xl p-8 flex flex-col items-center justify-center h-full">
                 <div className="mb-4">
                   <svg className="w-12 h-12" viewBox="0 0 48 48">
-                    <text x="12" y="28" className="text-xl font-bold fill-blue-600">G</text>
+                    <text
+                      x="12"
+                      y="28"
+                      className="text-xl font-bold fill-blue-600"
+                    >
+                      G
+                    </text>
                   </svg>
                 </div>
                 <p className="text-gray-600 text-sm mb-3">Google</p>
                 <h3 className="text-3xl font-bold text-gray-900 mb-1">10k+</h3>
-                <p className="text-gray-600 text-sm text-center">Clienti felici</p>
+                <p className="text-gray-600 text-sm text-center">
+                  Clienti felici
+                </p>
                 <div className="flex gap-2 mt-4">
                   {[1, 2, 3, 4].map((i) => (
                     <Image
@@ -126,10 +143,16 @@ export function HealthSection() {
                     className="rounded-full"
                   />
                 </div>
-                <Button className="bg-[#E8B33F] hover:bg-[#D4A024] text-white font-semibold px-6 py-2 rounded-full flex items-center gap-2">
-                  Candidati ora
-                  <ArrowRight className="w-4 h-4" />
-                </Button>
+                <a
+                  href="https://wa.link/a7fuu7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button className="bg-[#E8B33F] hover:bg-[#D4A024] text-white font-semibold px-6 py-2 rounded-full flex items-center gap-2">
+                    Candidati ora
+                    <ArrowRight className="w-4 h-4" />
+                  </Button>
+                </a>
               </div>
             </AnimatedSection>
           </div>
@@ -138,4 +161,3 @@ export function HealthSection() {
     </section>
   );
 }
-
