@@ -8,6 +8,14 @@ export default {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  safelist: [
+    "bg-yellow-400",
+    "hover:bg-yellow-500",
+    "bg-green-500",
+    "bg-gradient-to-br",
+    "from-emerald-500",
+    "to-emerald-500",
+  ],
   theme: {
   	extend: {
   		colors: {

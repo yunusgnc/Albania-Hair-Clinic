@@ -16,28 +16,30 @@ import { FAQSection } from "@/components/FAQSection";
 import { FormSection } from "@/components/FormSection";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { MobileBottomNav } from "@/components/MobileBottomNav";
+import { PromoModal } from "@/components/PromoModal";
 
 export default function Home() {
   return (
     <>
-      <Header />
+      <PromoModal />
+      <div className="px-4 sm:px-6 md:mx-6 lg:mx-8 my-6 md:my-10 border-2 rounded-3xl">
+        <Header />
+      </div>
       <HeroSection />
-      <StatsSection />
       <ChiSiamoSection />
+      <ResultsSection />
+      <InstagramSection />
+      <FormSection />
+      <ReviewsSection />
+      <TecnicheSection />
+      <PricingSection />
+      <FAQSection />
       <WhyChooseSection />
       <HealthSection />
-      <BeforeAfterSection />
-      <TecnicheSection />
-      <ProcessSection />
-      <PricingSection />
-      <ResultsSection />
-      <TestimonialsSection />
-      <ReviewsSection />
-      <InstagramSection />
-      <FAQSection />
-      <FormSection />
       <Footer />
       <WhatsAppButton />
+      <MobileBottomNav />
     </>
   );
 }

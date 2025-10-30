@@ -1,81 +1,87 @@
 "use client";
 
 import { AnimatedSection } from "@/components/AnimatedSection";
-import { CheckCircle2 } from "lucide-react";
+import Image from "next/image";
 
 export function ProcessSection() {
   const steps = [
     {
-      number: "01",
-      title: "Consulenza Gratuita",
-      description: "Contattaci per una consulenza gratuita. I nostri esperti analizzeranno il tuo caso e risponderanno a tutte le tue domande.",
+      image: "/img/unsplash/step-1.jpg",
+      title: "Consulenza",
+      description: "Primo incontro per valutare le tue esigenze",
     },
     {
-      number: "02",
-      title: "Analisi dei Capelli",
-      description: "Invia le tue foto per un'analisi dettagliata. Valuteremo il numero di innesti necessari e il piano di trattamento.",
-    },
-    {
-      number: "03",
+      image: "/img/unsplash/step-2.jpg",
       title: "Pianificazione",
-      description: "Creiamo un piano personalizzato per te. Organizziamo il tuo viaggio, alloggio e trasferimenti.",
+      description: "Progettazione dettagliata del trapianto",
     },
     {
-      number: "04",
-      title: "Giorno dell'Intervento",
-      description: "Il giorno dell'intervento, il nostro team di esperti eseguirà il trapianto con la massima cura e professionalità.",
+      image: "/img/unsplash/step-3.jpg",
+      title: "Intervento",
+      description: "Procedura effettuata da esperti qualificati",
     },
     {
-      number: "05",
-      title: "Follow-up",
-      description: "Assistenza post-operatoria completa. Ti seguiamo per un anno intero per garantire i migliori risultati.",
+      image: "/img/unsplash/step-4.jpg",
+      title: "Risultati",
+      description: "Monitoraggio del recupero e risultati finali",
     },
   ];
 
   return (
-    <section className="py-20 lavender-bg">
+    <section className="py-20 bg-gradient-to-b from-purple-50 to-white">
       <div className="container mx-auto px-4">
         <AnimatedSection animation="fade-in-up">
-          <div className="text-center mb-12">
-            <p className="text-[#E8B33F] font-medium text-sm uppercase tracking-wide mb-2">
+          <div className="text-center mb-16">
+            <p className="text-[#E8B33F] font-medium text-sm uppercase tracking-widest mb-3">
               Come Funziona
             </p>
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               La tua tabella di marcia per il trapianto di capelli
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Un processo semplice e trasparente in 5 passi
+            <p className="text-gray-600 max-w-3xl mx-auto text-base">
+              Ci impegniamo a migliorare i risultati di salute attraverso cure personalizzate, trattamenti innovativi e un'attenzione particolare alla prevenzione.
             </p>
           </div>
         </AnimatedSection>
 
-        <div className="max-w-4xl mx-auto">
+        {/* 4 Column Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {steps.map((step, index) => (
             <AnimatedSection
               key={index}
-              animation="fade-in-right"
+              animation="scale-in"
               delay={index * 100}
             >
-              <div className="relative mb-8 last:mb-0">
-                {index < steps.length - 1 && (
-                  <div className="absolute left-8 top-20 w-0.5 h-full bg-[#E8B33F] opacity-20" />
-                )}
-                <div className="flex gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#E8B33F] to-[#D4A024] flex items-center justify-center text-white font-bold text-xl shadow-lg">
-                      {step.number}
-                    </div>
-                  </div>
-                  <div className="flex-1 bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-shadow">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2 flex items-center gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-green-500" />
-                      {step.title}
-                    </h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      {step.description}
-                    </p>
+              <div className="flex flex-col items-center text-center">
+                {/* Circular Image */}
+                <div className="mb-6">
+                  <div className="w-32 h-32 rounded-full overflow-hidden shadow-lg border-4 border-purple-100">
+                    <Image
+                      src={step.image}
+                      alt={step.title}
+                      width={128}
+                      height={128}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </div>
+
+                {/* Number Badge */}
+                <div className="mb-4">
+                  <span className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-[#E8B33F] to-[#D4A024] text-white font-bold text-lg rounded-full shadow-md">
+                    {index + 1}
+                  </span>
+                </div>
+
+                {/* Title */}
+                <h3 className="text-lg font-bold text-gray-900 mb-3 leading-tight">
+                  {step.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  {step.description}
+                </p>
               </div>
             </AnimatedSection>
           ))}

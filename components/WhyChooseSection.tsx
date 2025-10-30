@@ -1,70 +1,61 @@
 "use client";
 
 import { AnimatedSection } from "@/components/AnimatedSection";
-import { Card } from "@/components/ui/card";
-import { Award, Shield, Users, Clock } from "lucide-react";
+import { Check } from "lucide-react";
 
 export function WhyChooseSection() {
   const reasons = [
     {
-      icon: Award,
-      title: "Oltre 10 anni di esperienza",
-      description: "I nostri chirurghi hanno più di un decennio di esperienza nel trapianto di capelli.",
+      text: "Utilizziamo la tecnologia più avanzata per un trapianto di capelli sicuro ed efficace.",
     },
     {
-      icon: Users,
-      title: "3000+ pazienti soddisfatti",
-      description: "Migliaia di pazienti da tutto il mondo hanno scelto la nostra clinica.",
+      text: "I nostri chirurghi esperti garantiscono risultati naturali e duraturi.",
     },
     {
-      icon: Shield,
-      title: "Garanzia a vita",
-      description: "Offriamo una garanzia a vita sui nostri trattamenti di trapianto di capelli.",
+      text: "Ti garantiamo un'esperienza confortevole e senza interruzioni, dall'inizio alla fine.",
     },
     {
-      icon: Clock,
-      title: "Supporto 24/7",
-      description: "Il nostro team è sempre disponibile per rispondere alle tue domande.",
+      text: "La tua fiducia è la nostra priorità: un'assistenza di qualità in ogni fase del tuo percorso.",
     },
   ];
 
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <AnimatedSection animation="fade-in-up">
-          <div className="text-center mb-12">
-            <p className="text-[#E8B33F] font-medium text-sm uppercase tracking-wide mb-2">
-              Perché sceglierci
-            </p>
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Perché scegliere i pazienti ci fidano preferire?
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              La tua salute e il tuo benessere sono la nostra priorità
-            </p>
-          </div>
-        </AnimatedSection>
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left Side - Text */}
+          <AnimatedSection animation="fade-in-left">
+            <div>
+              <p className="text-[#E8B33F] font-medium text-sm uppercase tracking-widest mb-3">
+                Perché sceglierci noi
+              </p>
+              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                Perché migliaia di pazienti ci hanno preferito?
+              </h2>
+              <p className="text-gray-600 text-base leading-relaxed">
+                La nostra più grande referenza per i nostri pazienti è ancora una volta i nostri pazienti. La fiducia che ripongono in noi è il nostro migliore biglietto da visita.
+              </p>
+            </div>
+          </AnimatedSection>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {reasons.map((reason, index) => (
-            <AnimatedSection
-              key={index}
-              animation="scale-in"
-              delay={index * 100}
-            >
-              <Card className="p-6 text-center hover:shadow-xl transition-shadow border-2 border-gray-100 h-full">
-                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-[#E8B33F] to-[#D4A024] rounded-full flex items-center justify-center">
-                  <reason.icon className="w-8 h-8 text-white" />
+          {/* Right Side - Checkmark List */}
+          <AnimatedSection animation="fade-in-right" delay={100}>
+            <div className="space-y-4">
+              {reasons.map((reason, index) => (
+                <div
+                  key={index}
+                  className="flex gap-4 items-start group"
+                >
+                  <div className="flex-shrink-0 w-6 h-6 bg-gradient-to-br from-[#E8B33F] to-[#D4A024] rounded-full flex items-center justify-center mt-1">
+                    <Check className="w-4 h-4 text-white" />
+                  </div>
+                  <p className="text-gray-700 text-base leading-relaxed pt-0.5">
+                    {reason.text}
+                  </p>
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">
-                  {reason.title}
-                </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  {reason.description}
-                </p>
-              </Card>
-            </AnimatedSection>
-          ))}
+              ))}
+            </div>
+          </AnimatedSection>
         </div>
       </div>
     </section>

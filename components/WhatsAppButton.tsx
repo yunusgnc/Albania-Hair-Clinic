@@ -6,10 +6,10 @@ import { motion } from "framer-motion";
 export function WhatsAppButton() {
   return (
     <motion.a
-      href="https://wa.me/355685055556"
+      href="https://wa.link/a7fuu7"
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50"
+      className="hidden md:flex fixed bottom-6 right-6 z-40"
       initial={{ scale: 0 }}
       animate={{ scale: 1 }}
       transition={{

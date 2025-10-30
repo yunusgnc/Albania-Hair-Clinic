@@ -6,14 +6,13 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Card } from "@/components/ui/card";
 import { Phone } from "lucide-react";
 import { AnimatedSection } from "@/components/AnimatedSection";
 
 export function FAQSection() {
   const faqs = [
     {
-      question: "Perché l'Albania è una destinazione popolare per il trapianto di capelli?",
+      question: "Perché l' Albania è una destinazione popolare per il trapianto di capelli?",
       answer:
         "L'Albania offre procedure di trapianto di capelli di alta qualità a prezzi accessibili, con chirurghi esperti e strutture all'avanguardia, che ne fanno una scelta privilegiata per i cittadini di tutto il mondo.",
     },
@@ -45,56 +44,60 @@ export function FAQSection() {
   ];
 
   return (
-    <section id="support" className="py-20 bg-white">
+    <section id="support" className="py-20 bg-gradient-to-b from-purple-50 to-white">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
-          {/* Support Card */}
-          <AnimatedSection animation="fade-in-up">
-            <Card className="p-8 mb-12 bg-gradient-to-br from-[#F5F3FF] to-white">
-              <div className="text-center mb-8">
-                <p className="text-[#E8B33F] font-medium text-sm uppercase tracking-wide mb-2">
-                  Domande frequenti
-                </p>
-                <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-                  Siamo qui per te.
-                </h2>
-                <p className="text-gray-600 max-w-2xl mx-auto">
-                  Siamo pronti a rispondere a tutte le tue domande che ti incuriosiscono. Contattaci subito. Ricevi le risposte a tutte le tue domande sul trapianto di capelli.
-                </p>
-              </div>
+        <div className="grid lg:grid-cols-2 gap-12">
+          {/* Left Side - Title, Description & Contact */}
+          <AnimatedSection animation="fade-in-left">
+            <div>
+              <p className="text-[#E8B33F] font-medium text-sm uppercase tracking-widest mb-3">
+                Domande frequenti
+              </p>
+              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                Siamo qui per te.
+              </h2>
+              <p className="text-gray-600 text-base leading-relaxed mb-12">
+                Siamo pronti a rispondere a tutte le tue domande che ti incuriosiscono. Contattaci subito. Ricevi le risposte a tutte le tue domande sul trapianto di capelli.
+              </p>
 
-              <div className="bg-white rounded-2xl p-6 max-w-md mx-auto">
-                <div className="flex items-center gap-4">
-                  <div className="w-14 h-14 bg-[#E8B33F] rounded-full flex items-center justify-center">
-                    <Phone className="w-7 h-7 text-white" />
+              {/* WhatsApp Contact Card */}
+              <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+                <a
+                  href="https://wa.link/a7fuu7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-4 hover:opacity-80 transition-opacity"
+                >
+                  <div className="w-12 h-12 bg-gradient-to-br from-[#E8B33F] to-[#D4A024] rounded-full flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <p className="text-sm text-gray-600 mb-1">
                       Contattaci ora per una consulenza gratuita
                     </p>
-                    <p className="text-xl font-bold text-gray-900">24/7 Whatsapp</p>
+                    <p className="text-lg font-bold text-gray-900 mb-1">24/7 Whatsapp</p>
                     <p className="text-sm text-gray-600">
                       Ora clicca, inizia a ricevere il servizio
                     </p>
                   </div>
-                </div>
+                </a>
               </div>
-            </Card>
+            </div>
           </AnimatedSection>
 
-          {/* FAQ Accordion */}
-          <AnimatedSection animation="fade-in-up" delay={100}>
-            <Accordion type="single" collapsible className="space-y-4">
+          {/* Right Side - FAQ Accordion */}
+          <AnimatedSection animation="fade-in-right" delay={100}>
+            <Accordion type="single" collapsible className="space-y-3">
               {faqs.map((faq, index) => (
                 <AccordionItem
                   key={index}
                   value={`item-${index}`}
-                  className="border border-gray-200 rounded-lg px-6 bg-gray-50"
+                  className="border border-gray-200 rounded-lg px-6 py-4 bg-white hover:shadow-md transition-shadow"
                 >
-                  <AccordionTrigger className="text-left font-semibold text-gray-900 hover:no-underline">
+                  <AccordionTrigger className="text-left font-semibold text-gray-900 hover:no-underline text-base">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-gray-600 leading-relaxed">
+                  <AccordionContent className="text-gray-600 leading-relaxed text-sm">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>

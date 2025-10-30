@@ -21,8 +21,19 @@ export const metadata: Metadata = {
     type: "website",
     locale: "it_IT",
     url: "https://albaniahairclinic.com",
+    images: [
+      {
+        url: "https://albaniahairclinic.com/img/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Albania Hair Clinic",
+      },
+    ],
   },
   robots: "index, follow",
+  alternates: {
+    canonical: "https://albaniahairclinic.com",
+  },
 };
 
 export default function RootLayout({
@@ -34,6 +45,32 @@ export default function RootLayout({
     <html lang="it">
       <head>
         <link rel="icon" href="/favicon.ico" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "MedicalBusiness",
+              name: "Albania Hair Clinic",
+              image: "https://albaniahairclinic.com/img/logo.png",
+              description: "Clinica specializzata in trapianto di capelli con tecniche DHI e FUE",
+              url: "https://albaniahairclinic.com",
+              telephone: "+355-68-505-5556",
+              address: {
+                "@type": "PostalAddress",
+                addressCountry: "AL",
+                addressLocality: "Tirana",
+              },
+              sameAs: [
+                "https://www.instagram.com/albania.hair.clinic",
+                "https://www.facebook.com/albaniahairclinic",
+              ],
+              areaServed: ["IT", "AL", "TR", "DE", "FR"],
+              medicalSpecialty: "Hair Transplantation",
+              knowsAbout: ["Hair Transplant", "DHI", "FUE", "Hair Loss Treatment"],
+            }),
+          }}
+        />
       </head>
       <ClientBody className={inter.className}>{children}</ClientBody>
     </html>
